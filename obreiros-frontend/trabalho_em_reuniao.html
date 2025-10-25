@@ -289,13 +289,13 @@
                         </li>
                         
                          <li>
-                            <a href="cadastro_grupos.html"><i class="fa fa-wrench fa-fw"></i> Movimentação de Grupos</a>
+                            <a href="listagem_grupos.html"><i class="fa fa-users fa-fw"></i> Listagem de Grupos</a>
                         </li>
                         <li>
                             <a  href="grid_marcacao_presenca_obreiros.html"><i class="fa fa-edit fa-fw"></i> Frequência em Reuniões Obreiros</a>
                         </li>
                         <li>
-                            <a class="active" href="trabalho_em_reuniao.html"><i class="fa fa-edit fa-fw"></i> Trabalho em Reunião</a>
+                            <a class="active" href="trabalho_em_reuniao.html"><i class="fa fa-edit fa-fw"></i> Serviço de Uniforme</a>
                         </li>
                         <li>
                             <a href="relatorios.html"><i class="fa fa-bar-chart-o fa-fw"></i> Relatórios</a>
@@ -327,7 +327,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Frequência em Reuniões de Obreiros</h1>
+            <h1 class="page-header">Frequência em Reuniões no Salão</h1>
         </div>
     </div>
 
@@ -349,8 +349,27 @@
             </select>
         </div>
         <div class="form-group" style="margin-right: 15px;">
-            <label for="pesquisaObreiro">Obreiro:</label>
-            <input type="text" class="form-control" id="pesquisaObreiro" placeholder="Pesquisar obreiro...">
+            <label for="qrObreiro">Obreiro (QR Code):</label>
+            <button type="button" id="abrirCamera" class="btn btn-default" style="margin-bottom:10px;">Abrir Câmera</button>
+            <div id="qr-reader" style="width:250px; display:none;"></div>
+            <input type="hidden" id="qrObreiro" name="qrObreiro">
+            <script src="https://unpkg.com/html5-qrcode"></script>
+            <script>
+                var html5QrcodeScanner;
+                document.getElementById('abrirCamera').addEventListener('click', function() {
+                    document.getElementById('qr-reader').style.display = 'block';
+                    if (!html5QrcodeScanner) {
+                        html5QrcodeScanner = new Html5QrcodeScanner(
+                            "qr-reader", { fps: 10, qrbox: 200 });
+                        html5QrcodeScanner.render(function onScanSuccess(decodedText, decodedResult) {
+                            document.getElementById('qrObreiro').value = decodedText;
+                            alert(decodedText);
+                            html5QrcodeScanner.clear();
+                            document.getElementById('qr-reader').style.display = 'none';
+                        });
+                    }
+                });
+            </script>
         </div>
         <button type="submit" class="btn btn-primary">Adicionar</button>
     </form>

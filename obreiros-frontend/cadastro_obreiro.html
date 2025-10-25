@@ -288,13 +288,13 @@
                             <a href="listagem_obreiros.html"><i class="fa fa-user fa-fw"></i> Listagem de Obreiro(a)</a>
                         </li>
                          <li>
-                            <a href="cadastro_grupos.html"><i class="fa fa-wrench fa-fw"></i> Movimentação de Grupos</a>
+                            <a href="listagem_grupos.html"><i class="fa fa-users fa-fw"></i> Listagem de Grupos</a>
                         </li>
                         <li>
                             <a href="grid_marcacao_presenca_obreiros.html"><i class="fa fa-edit fa-fw"></i> Frequência em Reuniões Obreiros</a>
                         </li>
                         <li>
-                            <a href="trabalho_em_reuniao.html"><i class="fa fa-edit fa-fw"></i> Trabalho em Reunião</a>
+                            <a href="trabalho_em_reuniao.html"><i class="fa fa-edit fa-fw"></i> Serviço de Uniforme</a>
                         </li>
                         <li>
                             <a href="relatorios.html"><i class="fa fa-bar-chart-o fa-fw"></i> Relatórios</a>
@@ -322,130 +322,212 @@
                             Formulário de Cadastro
                         </div>
                         <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <form role="form" enctype="multipart/form-data">
-                                        <div class="form-group">
-                                            <label>Fotografia</label>
-                                            <input type="file" class="form-control" accept="image/*">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="active"><a href="#cadastro" role="tab" data-toggle="tab">Cadastro</a></li>
+                                <li><a href="#saude" role="tab" data-toggle="tab">Saúde do Obreiro</a></li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content" style="margin-top:20px;">
+                                <div class="tab-pane fade in active" id="cadastro">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <form role="form" enctype="multipart/form-data">
+                                                <div class="form-group">
+                                                    <label>Fotografia</label>
+                                                    <input type="file" class="form-control" accept="image/*">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Nome Completo</label>
+                                                    <input class="form-control" placeholder="Digite o nome completo">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Data de Nascimento</label>
+                                                    <input class="form-control" placeholder="DD/MM/AAAA">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Endereço</label>
+                                                    <input class="form-control" placeholder="Digite o endereço">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Telefone</label>
+                                                    <input class="form-control" placeholder="(XX) XXXXX-XXXX">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Grupo da Igreja</label>
+                                                    <select class="form-control">
+                                                        <option>Escolha o grupo</option>
+                                                        <option>Força Jovem Universal (FJU)</option>
+                                                        <option>Força Teen Universal (FTU)</option>
+                                                        <option>Grupo Calebe</option>
+                                                        <option>Grupo da Saúde (GSU)</option>
+                                                        <option>Godllywood</option>
+                                                        <option>Resgate Universal</option>
+                                                        <option>Escola Bíblica Infantil (EBI)</option>
+                                                        <option>Universal nos Presídios (UNP)</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group  col-lg-6">
+                                                    <label>Grupo de Obreiros</label>
+                                                    <select class="form-control">
+                                                        <option>Escolha o grupo</option>
+                                                        <option>Grupo A</option>
+                                                        <option>Grupo B</option>
+                                                        <option>Grupo C</option>
+                                                        <option>Grupo D</option>
+                                                        <option>Grupo E</option>
+                                                        <option>Grupo F</option>
+                                                        <option>Grupo G</option>
+                                                        <option>Grupo H</option>
+                                                        <option>Grupo I</option>
+                                                        <option>Grupo J</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-lg-6">
+                                                    <label>Sexo</label>
+                                                    <select class="form-control">
+                                                        <option>Escolha o sexo</option>
+                                                        <option>Masculino</option>
+                                                        <option>Feminino</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Profissão</label>
+                                                    <input class="form-control" placeholder="Digite a profissão">
+                                                </div>
+                                                
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <label>Observações</label>
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <button type="submit" class="btn btn-default">Salvar</button>
+                                                <button type="reset" class="btn btn-default">Limpar</button>
+                                            </form>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Nome Completo</label>
-                                            <input class="form-control" placeholder="Digite o nome completo">
+                                        <!-- /.col-lg-6 (nested) -->
+                                        <div class="col-lg-6">
+                                            <form role="form">
+                                                <div class="form-group">
+                                                    <label>CPF</label>
+                                                    <input class="form-control" placeholder="Digite o CPF">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>RG</label>
+                                                    <input class="form-control" placeholder="Digite o RG">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>E-mail</label>
+                                                    <input class="form-control" placeholder="Digite o e-mail">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Data de Batismo</label>
+                                                    <input class="form-control" placeholder="DD/MM/AAAA">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Estado Civil</label>
+                                                    <select class="form-control">
+                                                        <option>Escolha o estado civil</option>
+                                                        <option>Solteiro(a)</option>
+                                                        <option>Casado(a)</option>
+                                                        <option>Divorciado(a)</option>
+                                                        <option>Viúvo(a)</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Filiação</label>
+                                                    <input class="form-control" placeholder="Nome dos pais">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Data do Levantamento</label>
+                                                    <input class="form-control" placeholder="DD/MM/AAAA">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Escolaridade</label>
+                                                    <select class="form-control">
+                                                        <option>Escolha a escolaridade</option>
+                                                        <option>Fundamental Incompleto</option>
+                                                        <option>Fundamental Completo</option>
+                                                        <option>Médio Incompleto</option>
+                                                        <option>Médio Completo</option>
+                                                        <option>Superior Incompleto</option>
+                                                        <option>Superior Completo</option>
+                                                        <option>Pós-graduação</option>
+                                                        <option>Mestrado</option>
+                                                        <option>Doutorado</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                        <label>Situação Atual</label>
+                                                        <select class="form-control">
+                                                            <option>Escolha a situação</option>
+                                                            <option>Ativo</option>
+                                                            <option>Inativo</option>
+                                                            <option>Em tratamento de saúde</option>
+                                                            <option>Afastado</option>
+                                                            <option>Jubilado</option>
+                                                        </select>
+                                                </div>
+                                            </form>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Data de Nascimento</label>
-                                            <input class="form-control" placeholder="DD/MM/AAAA">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Endereço</label>
-                                            <input class="form-control" placeholder="Digite o endereço">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Telefone</label>
-                                            <input class="form-control" placeholder="(XX) XXXXX-XXXX">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Grupo da Igreja</label>
-                                            <select class="form-control">
-                                                <option>Escolha o grupo</option>
-                                                <option>Força Jovem Universal (FJU)</option>
-                                                <option>Força Teen Universal (FTU)</option>
-                                                <option>Grupo Calebe</option>
-                                                <option>Grupo da Saúde (GSU)</option>
-                                                <option>Godllywood</option>
-                                                <option>Resgate Universal</option>
-                                                <option>Escola Bíblica Infantil (EBI)</option>
-                                                <option>Universal nos Presídios (UNP)</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group  col-lg-6">
-                                            <label>Grupo de Obreiros</label>
-                                            <select class="form-control">
-                                                <option>Escolha o grupo</option>
-                                                <option>Grupo A</option>
-                                                <option>Grupo B</option>
-                                                <option>Grupo C</option>
-                                                <option>Grupo D</option>
-                                                <option>Grupo E</option>
-                                                <option>Grupo F</option>
-                                                <option>Grupo G</option>
-                                                <option>Grupo H</option>
-                                                <option>Grupo I</option>
-                                                <option>Grupo J</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-lg-6">
-                                            <label>Sexo</label>
-                                            <select class="form-control">
-                                                <option>Escolha o sexo</option>
-                                                <option>Masculino</option>
-                                                <option>Feminino</option>
-                                            </select>
-                                        </div>
+                                        <!-- /.col-lg-6 (nested) -->
+                                    </div>
+                                    <!-- /.row (nested) -->
+                                </div>
+                                <div class="tab-pane fade" id="saude">
+                                    <form role="form" style="margin-bottom:20px;">
                                         <div class="row">
-                                            <div class="form-group col-lg-6">
-                                                <label>Observações</label>
-                                                <textarea class="form-control" rows="3"></textarea>
+                                            <div class="form-group col-lg-4">
+                                                <label>Data Início da Doença</label>
+                                                <input type="date" class="form-control">
                                             </div>
-                                            <div class="form-group col-lg-6">
-                                                <label>Situação Atual</label>
-                                                <select class="form-control">
-                                                    <option>Escolha a situação</option>
-                                                    <option>Ativo</option>
-                                                    <option>Inativo</option>
-                                                    <option>Em tratamento de saúde</option>
-                                                    <option>Afastado</option>
-                                                    <option>Jubilado</option>
-                                                </select>
+                                            <div class="form-group col-lg-4">
+                                                <label>Data de Recuperação</label>
+                                                <input type="date" class="form-control">
+                                            </div>
+                                            <div class="form-group col-lg-4">
+                                                <label>Estado de Saúde</label>
+                                                <input type="text" class="form-control" placeholder="Descreva o estado de saúde">
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-default">Salvar</button>
-                                        <button type="reset" class="btn btn-default">Limpar</button>
+                                        <button type="submit" class="btn btn-primary">Salvar</button>
                                     </form>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Data Início</th>
+                                                    <th>Estado de Saúde</th>
+                                                    <th>Data de Recuperação</th>
+                                                    <th>Ações</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>2024-04-01</td>
+                                                    <td>Gripe forte, repouso recomendado</td>
+                                                    <td>2024-04-10</td>
+                                                    <td><button class="btn btn-danger btn-xs">Remover</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2023-12-15</td>
+                                                    <td>Cirurgia de apêndice, recuperação em andamento</td>
+                                                    <td>2024-01-10</td>
+                                                    <td><button class="btn btn-danger btn-xs">Remover</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2022-08-05</td>
+                                                    <td>Covid-19, isolamento domiciliar</td>
+                                                    <td>2022-08-20</td>
+                                                    <td><button class="btn btn-danger btn-xs">Remover</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                                <!-- /.col-lg-6 (nested) -->
-                                <div class="col-lg-6">
-                                    <form role="form">
-                                        <div class="form-group">
-                                            <label>CPF</label>
-                                            <input class="form-control" placeholder="Digite o CPF">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>RG</label>
-                                            <input class="form-control" placeholder="Digite o RG">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>E-mail</label>
-                                            <input class="form-control" placeholder="Digite o e-mail">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Data de Batismo</label>
-                                            <input class="form-control" placeholder="DD/MM/AAAA">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Estado Civil</label>
-                                            <select class="form-control">
-                                                <option>Escolha o estado civil</option>
-                                                <option>Solteiro(a)</option>
-                                                <option>Casado(a)</option>
-                                                <option>Divorciado(a)</option>
-                                                <option>Viúvo(a)</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Filiação</label>
-                                            <input class="form-control" placeholder="Nome dos pais">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Data do Levantamento</label>
-                                            <input class="form-control" placeholder="DD/MM/AAAA">
-                                        </div>
-                                    </form>
-                                </div>
-                                <!-- /.col-lg-6 (nested) -->
                             </div>
-                            <!-- /.row (nested) -->
                         </div>
                         <!-- /.panel-body -->
                     </div>
